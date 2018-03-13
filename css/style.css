@@ -2,13 +2,46 @@
 
 /* GLOBAL */
 
+
+
+
+
+
+#channels {
+    overflow: auto; 
+    position: absolute;
+    height: 100%;
+    width: 40%;
+
+
+}
+
+#chat {
+     overflow:auto;     
+    position: absolute;
+    height: auto;
+    width: 60%;
+    left: 40%;
+    height: 100%;
+
+}
+#chat .message{
+    
+    position: relative;
+    top: 56px;    
+    
+}
+
+
+/* #4 #general styles*/
+
 /* #4 #global styles*/
 
 * {
     /* #4 use #roboto #font */
     font-family: 'Roboto', 'Arial', sans-serif;
 
-     /* #4 #sweat take care of #spacing between various elements */
+    /* #4 #sweat take care of #spacing between various elements */
     margin: 0;
     padding: 0;
 }
@@ -18,7 +51,9 @@ body {
 }
 
 /* #4 # sweat #uppercase buttons and w3w locations */
-button, strong {
+
+button,
+strong {
     text-transform: uppercase;
 }
 
@@ -27,16 +62,68 @@ button, strong {
 /* APP BAR */
 
 /* #4 #sweat address both #app-bar s */
+
 h1 {
+    z-index: 1;
+    height: 56px;
+    position:fixed;
     background-color: #3F51B5;
     color: white;
+    /* general style */
+    width: 100%;
+    
+    font-size: 16px;
+    padding: 0px 0px 0px 16px; 
 }
 
+
+#channels ul{
+    position: relative; 
+    top: 56px; 
+}
+
+.Zeichen_1{
+ position: absolute; 
+ width: 40px ;
+ right: 30px; 
+}
+
+
+
+.Zeichen_2{
+ position: absolute; 
+ width: 40px ;
+ right: 0px; 
+}
+
+
+.Bilder_Channel img{
+
+}
+
+#channels ul img{
+
+ position: inherit;
+}
+
+
+
+#channels h1{
+    padding: 0px 0px 0px 70px; 
+}
+
+h1 img {
+    position: inherit;
+    padding: 0px;
+    left: 16px; 
+}
 
 /* CHANNELS LIST */
 
 /* #4 #sweat #channels */
+
 ul {
+
     /* #3 #channels #list modifies h2 to ul */
     background-color: white;
     /* #3 #channels #bullets removed */
@@ -54,6 +141,7 @@ li {
 }
 
 /* #4 active #channel is #highlighted */
+
 li.selected {
     color: #3F51B5;
     border-left: 4px solid #3F51B5;
@@ -62,20 +150,31 @@ li.selected {
 li img {
     /* #4 #middle vertical alignment of icons in the #channels list */
     vertical-align: middle;
+    
 }
 
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
-#tab-bar {
+
+#chat-bar, #tab-bar {
     /* #3 #tab-bar #container should be white */
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+   
+    display: flex; 
+    justify-content: space-between;
+    position: fixed; 
+    bottom: 0px;
+    width: inherit ; 
+
+
 }
 
 /* #4 add styles to #tab-bar #buttons */
-#tab-bar button {
+
+#chat-bar button, #tab-bar button {
     background-color: white;
     border: none;
     font-size: 13px;
@@ -87,20 +186,35 @@ li img {
 }
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
-#tab-bar button img {
+
+#chat-bar button img, #tab-bar button img {
     display: block;
     margin: 0 auto 4px auto;
 }
 
 /* #4 the selected #tab-bar #button is #highlighted */
-#tab-bar button.selected {
+
+#chat-bar button.selected, #tab-bar button.selected {
     color: #3F51B5;
     border-bottom: 4px solid #3F51B5;
 }
 
+#chat-bar{
+   
+    display: inline;
+    text-align: left; 
+    
+}
+#chat-bar button{
+   width: 70px; 
+}
+
+
 
 /* MESSAGES */
+
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
+
 .message {
     /* #3 #chat #width*/
     width: 80%;
@@ -115,6 +229,9 @@ li img {
 
 .message h3 {
     font-size: medium;
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .message h3 em {
@@ -125,6 +242,7 @@ li img {
 .message h3 a {
     /* #3 #chat #link color is primary text */
     color: black;
+
 }
 
 .message p {
@@ -136,10 +254,38 @@ li img {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+    
+
+} 
+
+#chat .message button{
+position: relative;
+left: 590px;  
+top: -27px;  
+ 
 }
 
+
+
 /* #4 left align own #messages using #margins */
+
 .message.own {
     margin-left: 17.5%;
 }
 
+
+#emojis{
+    padding: 16px; 
+    overflow: auto; 
+    text-align: left;
+    height: 200px;
+    width: 200px; 
+    border: 1px;
+    background-color: white;
+    border-style: solid;
+    
+    border-color: black; 
+    position: fixed;
+    bottom: 72px; 
+ 
+}
