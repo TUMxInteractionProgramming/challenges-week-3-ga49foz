@@ -2,6 +2,11 @@
 <html>
 
 <head>
+    
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>chatter|app</title>
 
@@ -11,6 +16,7 @@
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <script src="js/script.js"></script>
 
 </head>
 
@@ -26,7 +32,7 @@
 
         <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
         <ul>
-            <li>#Yummy
+            <li id = "Channel_1"  onclick = "switchChannel('#Yummy');changestar_unfill(Channel_1)">#Yummy
 
                 <a class="Zeichen_1">
                     <!-- #3 #channels #favorite this is not starred -->
@@ -39,7 +45,7 @@
             </li>
 
             <!-- #4 #channel is #highlighted -->
-            <li class="selected">
+            <li   id = "Channel_2"  class="selected" onclick = "switchChannel('#SevenContinent');changestar_unfill(Channel_2);" >
                 #SevenContinents
                 <!-- #3 #channels #favorite this is starred -->
                 <a class="Zeichen_1">
@@ -49,7 +55,7 @@
             <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron right">
              </a>
             </li>
-            <li>#KillerApp
+            <li  id = "Channel_3"  onclick = "switchChannel('#KillerApp');changestar_unfill(Channel_3);"  >#KillerApp
                 <!-- #3 #channels #favorite this is not starred -->
                 <a class="Zeichen_1">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -58,7 +64,7 @@
             <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron right">
              </a>
             </li>
-            <li>#FirstPersonOnMars
+            <li  id = "Channel_4"  onclick = "switchChannel('#FirstPersonOnMars');changestar_unfill(Channel_4);">#FirstPersonOnMars
                 <!-- #3 #channels #favorite this is starred -->
                 <a class="Zeichen_1">
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
@@ -68,7 +74,7 @@
             </a>
             </li>
 
-            <li>#Octoberfest
+            <li  id = "Channel_5" onclick = "switchChannel('#Octoberfest');changestar_unfill(Channel_5);">#Octoberfest
                 <!-- #3 #channels #favorite this is not starred -->
                 <a class="Zeichen_1">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -104,11 +110,22 @@
 
     <!-- #4 #one #page -->
     <div id="chat">
-        <h1>
-            #SevenContinents
+        <h1  >
+            
+             
+            <a id="current_channel">#SevenContinents</a>
+            
             <small>by
-            <strong>cheeses.yard.applies</strong>
+                
+            <a id ="current_location-link" href="http://w3w.co/cheeses.yard.applies" target="_blank">   
+            <strong id="current_location">cheeses.yard.applies</strong>
+            </a>    
+                
+            <img id = "Channel-Bar-Star" src="http://ip.lfe.mw.tum.de/sections/star.png" alt="not starred" onclick= "changestar_fill()">  
+                
         </small>
+            
+            
         </h1>
 
         <!-- #3 #chat #container -->
@@ -214,7 +231,7 @@
         
         
         
-        <div id="chat-bar"><button id="emojis-button"><img src="http://ip.lfe.mw.tum.de/sections/smile-o.png"></button>
+        <div id="chat-bar"><button onclick = "toogle_box('emojis')" id="emojis-button"><img src="http://ip.lfe.mw.tum.de/sections/smile-o.png" alt ="smily"></button>
                 <div id="emojis">&#x1F601; &#x1F602; &#x1F603; &#x1F604; &#x1F605;</div>
         </div>
 

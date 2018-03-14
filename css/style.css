@@ -73,9 +73,14 @@ h1 {
     width: 100%;
     
     font-size: 16px;
-    padding: 0px 0px 0px 16px; 
+    padding: 0px 16px 0px 16px; 
 }
 
+
+
+h1 a{
+  color: white;  
+}
 
 #channels ul{
     position: relative; 
@@ -199,9 +204,16 @@ li img {
     border-bottom: 4px solid #3F51B5;
 }
 
+#emojis{
+    
+  display: none;  
+}
+
+
 #chat-bar{
    
     display: inline;
+    
     text-align: left; 
     
 }
@@ -225,6 +237,18 @@ li img {
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
 }
+
+
+#current_location{
+    color: white; 
+}
+
+.message h3 a {
+    /* #3 #chat #link color is primary text */
+    color: black;
+
+}
+
 
 
 .message h3 {
@@ -288,4 +312,10 @@ top: -27px;
     position: fixed;
     bottom: 72px; 
  
+}
+
+
+#Channel-Bar-Star{
+    position: relative; 
+     
 }
